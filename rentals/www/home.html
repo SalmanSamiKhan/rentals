@@ -1,0 +1,14 @@
+{% extends "templates/web.html" %}
+{% block page_content %}
+<h1>Home</h1>
+
+{% set user = frappe.session %}
+
+<ul>
+    <li>{{ user }}</li>
+</ul>
+
+<h2>Welcome {{user.user}}</h2>
+<h2>data: {{my_data}}</h2>
+
+{% endblock %}
