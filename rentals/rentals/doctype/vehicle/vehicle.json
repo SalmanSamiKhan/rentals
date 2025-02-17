@@ -13,7 +13,10 @@
   "model",
   "is_published",
   "insurance_expiry_date",
+  "summary",
+  "get_summary",
   "column_break_kzfb",
+  "audit_completed",
   "year",
   "licence_number",
   "color",
@@ -100,13 +103,30 @@
    "fieldname": "condition",
    "fieldtype": "Rating",
    "label": "Condition"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "HTML",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "get_summary",
+   "fieldtype": "Button",
+   "label": "Get Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "audit_completed",
+   "fieldtype": "Check",
+   "label": "Audit Completed",
+   "permlevel": 1
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-02-15 20:41:47.676497",
+ "modified": "2025-02-17 11:37:31.575165",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
@@ -122,6 +142,38 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Auditor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Auditor",
    "share": 1,
    "write": 1
   }
